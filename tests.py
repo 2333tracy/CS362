@@ -237,6 +237,7 @@ class Test(unittest.TestCase):
                         fi.close()
                         Ans1=passwordTester(line1)
                         print(Ans1)
+class Test2(unittest.TestCase):
     def tests_a2(self):
       i=0
       while(i<10):
@@ -244,7 +245,7 @@ class Test(unittest.TestCase):
         print(Ans1)
         i=i+1
       if (Ans1==False):
-            Ans1=PassGenerator_M1()
+            Ans1=PassGenerator_M1() 
             if (Ans1==False):
                 Ans1=PassGenerator_M2()
                 if (Ans1==False):
