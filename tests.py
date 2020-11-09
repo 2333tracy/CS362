@@ -13,7 +13,6 @@ group7 = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R
 group8 = ['0','1','2','3','4','5','6','7','8','9']
 group9 = ['~',r'\'','!','@','#','$','%','^','&','*','(',')','_','+','-','=']
 group10 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','~',r'\'','!','@','#','$','%','^','&','*','(',')','_','+','-','=']
-Ans1=False
 
 def PassGenerator_M():
     global group6,group7,group8,group9,group10
@@ -28,7 +27,7 @@ def PassGenerator_M():
     while i<(PassLen+1):
         number.append(generator.choice(group10))
         i=i+1
-    Random.shuffle(number)
+    generator.shuffle(number)
     Pass="".join(number)
     try:
         Answer=passwordTester(Pass)
@@ -60,7 +59,7 @@ def PassGenerator_M1():
     while i<(PassLen+1):
         number.append(generator.choice(group10))
         i=i+1
-    Random.shuffle(number)
+    generator.shuffle(number)
     Pass="".join(number)
     try:
         Answer=passwordTester(Pass)
@@ -93,7 +92,7 @@ def PassGenerator_M2():
     while i<(PassLen+1):
         number.append(generator.choice(group10))
         i=i+1
-    Random.shuffle(number)
+    generator.shuffle(number)
     Pass="".join(number)
     try:
         Answer=passwordTester(Pass)
@@ -127,7 +126,7 @@ def PassGenerator_M3():
     while i<(PassLen+1):
         number.append(generator.choice(group10))
         i=i+1
-    Random.shuffle(number)
+    generator.shuffle(number)
     Pass="".join(number)
     try:
         Answer=passwordTester(Pass)
@@ -147,15 +146,11 @@ def PassGenerator_M3():
 
 class Test(unittest.TestCase):
     def test_ran1(self):
-      global Ans1
       i=0
       while(i<10000):
         Ans1=PassGenerator_M()
         i=i+1
-
-if __name__ == '__main__':
-    unittest.main()
-    if (Ans1==False):
+      if (Ans1==False):
         Ans1=PassGenerator_M1()
         if (Ans1==False):
             Ans1=PassGenerator_M2()
@@ -166,4 +161,76 @@ if __name__ == '__main__':
                         line1=fi.readline()
                         fi.close()
                         PassGenerator_M(line1)
-                        print("Password is: " + line1)   
+                        print("Password is: " + line1)
+    def test_ran2(self):
+      i=0
+      while(i<10000):
+        Ans1=PassGenerator_M()
+        i=i+1
+      if (Ans1==False):
+            Ans1=PassGenerator_M1()
+            if (Ans1==False):
+                Ans1=PassGenerator_M2()
+                if (Ans1==False):
+                    Ans1=PassGenerator_M3()
+                    if (Ans1==False):
+                            fi=open("Pass.txt","r")
+                            line1=fi.readline()
+                            fi.close()
+                            PassGenerator_M(line1)
+                            print("Password is: " + line1)
+    def test_ran3(self):
+      i=0
+      while(i<10000):
+        Ans1=PassGenerator_M()
+        i=i+1
+      if (Ans1==False):
+            Ans1=PassGenerator_M1()
+            if (Ans1==False):
+                Ans1=PassGenerator_M2()
+                if (Ans1==False):
+                    Ans1=PassGenerator_M3()
+                    if (Ans1==False):
+                            fi=open("Pass.txt","r")
+                            line1=fi.readline()
+                            fi.close()
+                            PassGenerator_M(line1)
+                            print("Password is: " + line1)
+
+    def test_ran4(self):
+      i=0
+      while(i<10000):
+        Ans1=PassGenerator_M()
+        i=i+1
+      if (Ans1==False):
+            Ans1=PassGenerator_M1()
+            if (Ans1==False):
+                Ans1=PassGenerator_M2()
+                if (Ans1==False):
+                    Ans1=PassGenerator_M3()
+                    if (Ans1==False):
+                            fi=open("Pass.txt","r")
+                            line1=fi.readline()
+                            fi.close()
+                            PassGenerator_M(line1)
+                            print("Password is: " + line1)
+
+    def test_ran5(self):
+      i=0
+      while(i<10000):
+        Ans1=PassGenerator_M()
+        i=i+1
+      if (Ans1==False):
+            Ans1=PassGenerator_M1()
+            if (Ans1==False):
+                Ans1=PassGenerator_M2()
+                if (Ans1==False):
+                    Ans1=PassGenerator_M3()
+                    if (Ans1==False):
+                            fi=open("Pass.txt","r")
+                            line1=fi.readline()
+                            fi.close()
+                            PassGenerator_M(line1)
+                            print("Password is: " + line1)
+if __name__ == '__main__':
+    unittest.main()   
