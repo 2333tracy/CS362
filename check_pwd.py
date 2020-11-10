@@ -32,7 +32,7 @@ def writeFile():
     ofs.write(PassW)
     ofs.close()
 
-def passwordTester(n):
+def check_pwd(n):
     global group1,group2,group3,group4,group5
     if os.path.exists('Pass.txt'):
         try:

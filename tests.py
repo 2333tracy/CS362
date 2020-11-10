@@ -4,7 +4,7 @@ import unittest
 import os
 import time
 try:
-    from check_pwd import passwordTester
+    from check_pwd import check_pwd
 except Exception as error:
     pass
 
@@ -30,7 +30,7 @@ def PassGenerator_M():
     generator.shuffle(number)
     Pass="".join(number)
     try:
-        Answer=passwordTester(Pass)
+        Answer=check_pwd(Pass)
         if Answer==True:
             print("Password is: " + Pass)
             os._exit(1)
@@ -62,7 +62,7 @@ def PassGenerator_M1():
     generator.shuffle(number)
     Pass="".join(number)
     try:
-        Answer=passwordTester(Pass)
+        Answer=check_pwd(Pass)
         if Answer==True:
             print("Password is: " + Pass)
             os._exit(1)
@@ -95,7 +95,7 @@ def PassGenerator_M2():
     generator.shuffle(number)
     Pass="".join(number)
     try:
-        Answer=passwordTester(Pass)
+        Answer=check_pwd(Pass)
         if Answer==True:
             print("Password is: " + Pass)
             os._exit(1)
@@ -129,7 +129,7 @@ def PassGenerator_M3():
     generator.shuffle(number)
     Pass="".join(number)
     try:
-        Answer=passwordTester(Pass)
+        Answer=check_pwd(Pass)
         if Answer==True:
             print("Password is: " + Pass)
             os._exit(1)
@@ -161,8 +161,9 @@ class Test(unittest.TestCase):
                     fi=open("Pass.txt","r")
                     line1=fi.readline()
                     fi.close()
-                    Ans1=passwordTester(line1)
+                    Ans1=check_pwd(line1)
                     print(Ans1)
+                    print("Password is: " + line1)
     def test_ran2(self):
       i=0
       while(i<10):
@@ -179,8 +180,9 @@ class Test(unittest.TestCase):
                         fi=open("Pass.txt","r")
                         line1=fi.readline()
                         fi.close()
-                        Ans1=passwordTester(line1)
+                        Ans1=check_pwd(line1)
                         print(Ans1)
+                        print("Password is: " + line1)
     def test_ran3(self):
       i=0
       while(i<10):
@@ -197,9 +199,9 @@ class Test(unittest.TestCase):
                         fi=open("Pass.txt","r")
                         line1=fi.readline()
                         fi.close()
-                        Ans1=passwordTester(line1)
+                        Ans1=check_pwd(line1)
                         print(Ans1)
-
+                        print("Password is: " + line1)
     def test_ran4(self):
       i=0
       while(i<10):
@@ -216,9 +218,9 @@ class Test(unittest.TestCase):
                         fi=open("Pass.txt","r")
                         line1=fi.readline()
                         fi.close()
-                        Ans1=passwordTester(line1)
+                        Ans1=check_pwd(line1)
                         print(Ans1)
-
+                        print("Password is: " + line1)
     def test_ran5(self):
       i=0
       while(i<10):
@@ -235,8 +237,9 @@ class Test(unittest.TestCase):
                         fi=open("Pass.txt","r")
                         line1=fi.readline()
                         fi.close()
-                        Ans1=passwordTester(line1)
+                        Ans1=check_pwd(line1)
                         print(Ans1)
+                        print("Password is: " +line1)
 class Test2(unittest.TestCase):
     def tests_a2(self):
       i=0
@@ -254,7 +257,8 @@ class Test2(unittest.TestCase):
                         fi=open("Pass.txt","r")
                         line1=fi.readline()
                         fi.close()
-                        Ans1=passwordTester(line1)
+                        Ans1=check_pwd(line1)
                         print(Ans1)
+                        print("Password is: " + line1)
 if __name__ == '__main__':
     unittest.main()   
